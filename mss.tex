@@ -4,9 +4,9 @@
 
 \addbibresource{mss.bib}
 
-\newcommand{\authorname}{Ernest P. Worrell}
-\newcommand{\authorpatp}{\patp{sampel-palnet}}
-\newcommand{\affiliation}{Kamp Kikakee}
+\newcommand{\authorname}{\patp{mopfel-winrux}, Izaac Mammadov, N. E. Davis}
+\newcommand{\authorpatp}{}
+\newcommand{\affiliation}{NativePlanet, Unaffiliated, Urbit Foundation}
 
 %  Make first page footer:
 \fancypagestyle{firststyle}{%
@@ -17,18 +17,18 @@
               Manuscript submitted for review.\\
               % {\it Urbit Systems Technical Journal} I:1 (2024):  1–3. \\
               ~ \\
-              Address author correspondence to \authorpatp.
+              Address author correspondence to \patp{lagrev-nocfep}.
               }}
 }
 %  Arrange subsequent pages:
 \fancyhf{}
 \fancyhead[LE]{{\urbitfont Urbit Systems Technical Journal}}
-\fancyhead[RO]{Floating-Point Arithmetic on Deterministic Systems}
+\fancyhead[RO]{SoftBLAS}
 \fancyfoot[LE,RO]{\thepage}
 
 %%MANUSCRIPT
-\title{Ernest Goes to Mars:  An Enquiry into the Foundations of Artificial Stupidity}
-\author{\authorname~\authorpatp \\ \affiliation}
+\title{SoftBLAS:  Software-Defined Basic Linear Algebra Subprograms for Deterministic Computation}
+\author{\patp{mopfel-winrux}, Izaac Mammadov \patp{diblud-ricbet}, N. E. Davis \patp{lagrev-nocfep} \\ \affiliation}
 \date{}
 
 \begin{document}
@@ -48,70 +48,29 @@ In this groundbreaking paper, we embark on a cosmic journey with the renowned ch
 
 \section{Introduction}
 
-Introduce the scope of your article and investigation.
+Background on determinism; cite Davis2024.  Discuss the importance of deterministic computation in the context of Urbit.  Introduce the ambition and scope of SoftBLAS.
 
 \section{Background and Literature}
 
-Exposite the relevant background and literature.
+Discuss the history of BLAS and its importance in scientific computing.  Discuss the aspects of deterministic computation which intersect with FP/BLAS.  Discuss BLAS nondeterminism.  Cite ReproBLAS.  Compare to Dongarra's PLASMA.
 
-\begin{enumerate}
-  \item  Prefer to \texttt{enumerate}.
-  \item  It is easier to refer to than \texttt{itemize}.
-\end{enumerate}
+\section[SoftBLAS]{Soft\textsc{BLAS}}
 
-\noindent
-Mark \texttt{\textbackslash noindent} in paragraphs that continue the thought of an \texttt{\textbackslash enumerate} block.
-
-\section{Urbit's Implementation}
-
-Oftentimes you will then turn to exploring how Urbit or closely related systems like Nockchain have approached or considered a problem.  You can look at a PR like \citetpr{urbit_urbit_6891}.
-
-\lstset{language=C}
-\begin{lstlisting}
-#include <stdio.h>
-
-double compute(float a, float b) {
-    return a * a + b * b;
-}
-
-int main() {
-    float x = 2.5;
-    float y = 3.7;
-
-    double result = compute(x, y);
-
-    printf("Result: %lf\n", result);
-
-    return 0;
-}
-\end{lstlisting}
-
-\noindent
-That code snippet was part of the text, and not a standalone entity to which we make separate repeated reference.
-
-\begin{figure}
-  \begin{lstlisting}[language=Python, caption={Example Python Code}, label={lst:example}]
-  def hello_world():
-      print("Hello, world!")
-  \end{lstlisting}
-\end{figure}
-
-Refer to the code listing: Listing~\ref{lst:example}.  (Note that we don't suppress indentation since it's a float.)
+The actual interface for SoftBLAS.
 
 
-\section{A Wild Ernest Appears}
+\section{Benchmarks}
 
-You can have as many sections as make sense.  Only sections and subsections appear in the table of contents.
+Benchmarking results for SoftBLAS vs. ATLAS, OpenBLAS, and MKL.
+
+\section{Future Work}
+
+What's done, what's wanted.
 
 \section{Conclusion}
 
-To summarize, why did you write it?  Why do we care?  What impact should it have on Urbit development?
+Done.\tombstone{}
 
-Your bibliography is a separate BibTeX file.  We use the \texttt{plainnat} bibliography style.  You can use \texttt{natbib} citation commands like \texttt{\textbackslash citep\{wikipedia\}} for parenthesized references.  Use \texttt{\textbackslash citet\{wikipedia\}} for inline references.  You can also use \texttt{\textbackslash citeauthor\{wikipedia\}} for the principal author's name.
-
-``You can use traditional TeX---or LaTeX---representations'' \citep{Varney1987}.
-
-“Or you can use fancy quotes—and symbols.”
-
+\selectlanguage{USenglish}
 \printbibliography
 \end{document}
